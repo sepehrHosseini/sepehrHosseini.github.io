@@ -1,4 +1,4 @@
-import { styled } from '@css/theme.config'
+import { styled } from '@css/theme.config';
 
 export const Nav = styled('nav', {
   display: 'flex',
@@ -8,26 +8,24 @@ export const Nav = styled('nav', {
   top: 0,
   left: 0,
   right: 0,
-  background: '$dark',
+  background: 'white',
   alignItems: 'center',
   height: 100,
-  width: '100vw',
-})
+  width: '100%',
+  border: '1px solid #eaeaeb',
+  '@iPadPro': {
+    height: 80,
+  },
+});
 
 export const NavContainer = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  width: '70%',
-  '@Flip': {
-    width: '85%',
-    justifyContent: 'space-around !important',
-  },
-  '@iPadPro': {
-    width: '100vw',
-    justifyContent: 'center',
-  },
-})
+  flex: 1,
+  maxWidth: 1280,
+  padding: '0 20px',
+});
 
 export const TerminalText = styled('p', {
   fontFamily: '$mono',
@@ -43,14 +41,14 @@ export const TerminalText = styled('p', {
   '@iPadPro': {
     display: 'none',
   },
-})
+});
 
 export const NavLinks = styled('div', {
   display: 'flex',
   '@Flip': {
     display: 'none',
   },
-})
+});
 
 export const NavLink = styled('a', {
   color: '$main',
@@ -61,7 +59,7 @@ export const NavLink = styled('a', {
   '&:hover': {
     color: '$white',
   },
-})
+});
 
 export const Toggle = styled('button', {
   background: 'none',
@@ -74,7 +72,7 @@ export const Toggle = styled('button', {
   '@media only screen and (min-width: 600px)': {
     display: 'none',
   },
-})
+});
 
 export const NavMenuContainer = styled('div', {
   zIndex: 999999,
@@ -85,7 +83,7 @@ export const NavMenuContainer = styled('div', {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-})
+});
 
 export const NavMenu = styled('div', {
   width: 280,
@@ -95,7 +93,7 @@ export const NavMenu = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-})
+});
 
 export const NavMenuLinks = styled('a', {
   textDecoration: 'none',
@@ -103,4 +101,4 @@ export const NavMenuLinks = styled('a', {
   fontSize: '$3',
   fontFamily: '$primary',
   margin: '0 0 10px 30px',
-})
+});

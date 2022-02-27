@@ -1,39 +1,40 @@
-import { styled } from '@css/theme.config'
+import { styled } from '@css/theme.config';
 
 export const StudyInfo = styled('div', {
   marginTop: 200,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-})
+});
 
 export const CaseStudy = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-})
+});
 
 export const Title = styled('p', {
-  fontSize: '$4',
-  color: '$white',
-  margin: '20px 0',
-})
-
-export const Description = styled('h1', {
   display: 'inline-block',
-  background: '$gradient',
   width: '50vw',
-  WebkitBackgroundClip: 'text',
-  backgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
+  color: 'var(--colors-white)',
   fontSize: '$6',
+  fontWeight: 'bold',
   textAlign: 'center',
-  marginBottom: 70,
+  marginBottom: 0,
   '@Flip': {
     width: '90vw',
     fontSize: '$4',
   },
-})
+});
+
+export const Description = styled('h1', {
+  width: '50vw',
+  textAlign: 'center',
+  fontSize: '18px',
+  fontWeight: 400,
+  color: 'var(--colors-main)',
+  margin: '20px 0',
+});
 
 export const Graphic = styled('div', {
   minHeight: 720,
@@ -41,4 +42,4 @@ export const Graphic = styled('div', {
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
   marginTop: 100,
-})
+});

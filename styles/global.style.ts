@@ -1,4 +1,4 @@
-import { global } from './theme.config'
+import { global } from './theme.config';
 
 const globalStyle = global({
   '*': {
@@ -10,11 +10,12 @@ const globalStyle = global({
   },
   html: {
     overflowX: 'hidden',
+    lineHeight: 1.5,
   },
   body: {
-    background: '$dark',
+    background: 'white',
     overflowX: 'hidden',
-    fontFamily: 'GTWalsheimPro',
+    fontFamily: 'Roboto',
   },
   '::selection': {
     background: '#4560F060',
@@ -46,17 +47,10 @@ const globalStyle = global({
   '.disabled': {
     display: 'none !important',
   },
-  '@font-face': {
-    fontFamily: 'GTWalsheimPro',
-    src: 'url(/GTWalsheimPro-Regular.ttf)',
-    fontStyle: 'normal',
-    fontWeight: 400,
-    fontDisplay: 'swap',
-  },
   '.ring.hovered': {
     width: 80,
     height: 80,
   },
-})
+});
 
-export default globalStyle
+export default globalStyle;

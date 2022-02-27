@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-import * as S from './Navbar.style'
-import * as Icons from 'react-feather'
+import * as S from './Navbar.style';
+import * as Icons from 'react-feather';
 
 type NavLinks = {
-  link: string
-  title: string
-}
+  link: string;
+  title: string;
+};
 
 const Navbar: React.FC<{ location: string }> = ({ location }) => {
-  const [nav, setNav] = React.useState<boolean>(false)
+  const [nav, setNav] = React.useState<boolean>(false);
 
   const ToggleNav = () => {
-    setNav((prevState) => !prevState)
-  }
+    setNav((prevState) => !prevState);
+  };
 
   const NavLinks: NavLinks[] = [
     {
@@ -29,18 +29,10 @@ const Navbar: React.FC<{ location: string }> = ({ location }) => {
       title: 'Projects',
     },
     {
-      link: '/#designs',
-      title: 'Designs',
-    },
-    {
       link: '/#contact',
       title: 'Contact',
     },
-    {
-      link: '/blog',
-      title: 'Blog',
-    },
-  ]
+  ];
 
   return (
     <>
@@ -55,7 +47,7 @@ const Navbar: React.FC<{ location: string }> = ({ location }) => {
       </S.NavMenuContainer>
       <S.Nav>
         <S.NavContainer>
-          <S.TerminalText>~/harshsingh/{location}</S.TerminalText>
+          <S.TerminalText>~/omidsaraei/{location}</S.TerminalText>
           <S.NavLinks>
             {NavLinks.map((link, index) => (
               <S.NavLink key={index} href={link.link}>
@@ -69,7 +61,7 @@ const Navbar: React.FC<{ location: string }> = ({ location }) => {
         </S.NavContainer>
       </S.Nav>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

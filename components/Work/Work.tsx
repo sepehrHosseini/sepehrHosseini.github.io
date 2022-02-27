@@ -1,28 +1,28 @@
-import React from 'react'
-import ScrollAnimation from 'react-animate-on-scroll'
+import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 
-import * as S from './Work.style'
-import * as Icon from 'react-feather'
+import * as S from './Work.style';
+import * as Icon from 'react-feather';
 
-import NoteShack from '@pub/NoteShack.png'
-import Debutur from '@pub/Debutur.png'
-import SnipBin from '@pub/SnipBin.png'
-import Oponion from '@pub/Oponion.png'
-import SketchMessage from '@pub/SketchMessage.png'
+import NoteShack from '@pub/NoteShack.png';
+import Debutur from '@pub/Debutur.png';
+import SnipBin from '@pub/SnipBin.png';
+import Oponion from '@pub/Oponion.png';
+import SketchMessage from '@pub/SketchMessage.png';
 
 type Projects = {
-  title: string
-  image: string
-  description: string
-  skills: string
-  github: string
-  link: string
-}
+  title: string;
+  image: string;
+  description: string;
+  skills: string;
+  github: string;
+  link: string;
+};
 
 const AboutComponent: React.FC = () => {
   const Projects: Projects[] = [
     {
-      title: 'NoteShack',
+      title: 'AP',
       image: NoteShack,
       description: 'An open-source full-stack project boilerplate',
       skills: 'GraphQL React PostgreSQL TypeScript',
@@ -61,57 +61,50 @@ const AboutComponent: React.FC = () => {
       github: 'sketch-message',
       link: 'sketchmessage.herokuapp.com',
     },
-  ]
+  ];
 
   return (
-    <S.WorkContainer id='projects'>
-      <ScrollAnimation animateIn='animate__bounceInRight' animateOnce={true}>
+    <S.WorkContainer id="projects">
+      <ScrollAnimation animateIn="animate__bounceInRight" animateOnce={true}>
         <S.WorkHeader>My Work</S.WorkHeader>
       </ScrollAnimation>
       {Projects.map((project, index) => (
         <S.ProjectBox key={index}>
           <S.InfoContainer>
-            <ScrollAnimation animateIn='animate__flipInX' animateOnce={true}>
+            <ScrollAnimation animateIn="animate__flipInX" animateOnce={true}>
               <S.ProjectTitle>{project.title}</S.ProjectTitle>
             </ScrollAnimation>
-            <ScrollAnimation animateIn='animate__flipInX' animateOnce={true}>
+            <ScrollAnimation animateIn="animate__flipInX" animateOnce={true}>
               <S.ProjectDescription>{project.description}</S.ProjectDescription>
             </ScrollAnimation>
 
-            <ScrollAnimation animateIn='animate__flipInX' animateOnce={true}>
+            <ScrollAnimation animateIn="animate__flipInX" animateOnce={true}>
               <S.ProjectTech>{project.skills}</S.ProjectTech>
             </ScrollAnimation>
             <S.ButtonsContainer>
-              <ScrollAnimation animateIn='animate__flipInX' animateOnce={true}>
+              <ScrollAnimation animateIn="animate__flipInX" animateOnce={true}>
                 <S.ViewProjectButton
                   href={`/studies/${project.title.toLowerCase()}`}
-                  target='_blank'
+                  target="_blank"
                 >
                   View Project
                 </S.ViewProjectButton>
-              </ScrollAnimation>
-              <ScrollAnimation animateIn='animate__flipInX' animateOnce={true}>
-                <S.GitHubButton
-                  href={`https://github.com/harshhhdev/${project.github}`}
-                  target='_blank'
-                >
-                  <Icon.GitHub />
-                </S.GitHubButton>
               </ScrollAnimation>
             </S.ButtonsContainer>
           </S.InfoContainer>
           <S.ProjectGraphic>
             <img
               src={project.image}
-              alt='Project Graphic'
+              alt="Project Graphic"
               width={500}
-              height={700}
+              height={300}
+              style={{ 'object-fit': 'cover' }}
             />
           </S.ProjectGraphic>
         </S.ProjectBox>
       ))}
     </S.WorkContainer>
-  )
-}
+  );
+};
 
-export default AboutComponent
+export default AboutComponent;

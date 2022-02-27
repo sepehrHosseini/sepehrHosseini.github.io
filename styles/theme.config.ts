@@ -1,4 +1,4 @@
-import { createCss } from '@stitches/react'
+import { createCss } from '@stitches/react';
 
 export const { css, styled, global, getCssString, keyframes } = createCss({
   theme: {
@@ -6,8 +6,8 @@ export const { css, styled, global, getCssString, keyframes } = createCss({
       main: '#6B7C95',
       main2: '#8696AD',
       primary: '#37393E',
-      dark: '#191919',
-      white: '#F4F4F5',
+      dark: '#F4F4F5',
+      white: '#191919',
       gradient:
         'linear-gradient(93.05deg, #EF9797 3.98%, rgba(206, 126, 199, 0.801616) 35.29%, #A364D6 68.78%, #A1D0F9 97.44%)',
     },
@@ -20,7 +20,8 @@ export const { css, styled, global, getCssString, keyframes } = createCss({
       6: '48px',
     },
     fonts: {
-      main: 'GTWalsheimPro, sans-serif',
+      main: 'Roboto, sans-serif',
+      primary: 'Roboto, sans-serif',
       mono: 'JetBrains Mono, monospace',
     },
   },
@@ -32,9 +33,9 @@ export const { css, styled, global, getCssString, keyframes } = createCss({
     iPhone: '(max-width: 375px)',
     iPhoneSE: '(max-width: 320px)',
   },
-})
+});
 
 export const ContentWrapper = styled('div', {
   position: 'relative',
   overflow: 'hidden',
-})
+});

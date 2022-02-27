@@ -1,4 +1,4 @@
-import { styled, keyframes } from '@css/theme.config'
+import { styled, keyframes } from '@css/theme.config';
 
 const TooltipAnimation = keyframes({
   '0%': {
@@ -11,37 +11,39 @@ const TooltipAnimation = keyframes({
     opacity: 0,
     transform: 'translateY(-40px)',
   },
-})
+});
 
 export const TopScrollbar = styled('div', {
   position: 'fixed',
   top: 0,
   left: 0,
   width: '0%',
-  height: 10,
+  height: 2,
   overflow: 'hidden',
   zIndex: 9999,
-})
+});
 
 export const TopScrollbarBG = styled('div', {
   width: '100%',
   height: '100%',
   position: 'absolute',
-  background: '$gradient',
-})
+  background: 'var(--colors-main)',
+});
 
 export const BlogPostContainer = styled('div', {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-})
+  // maxWidth: '1280px',
+  margin: '0 auto',
+  img: {
+    fitContent: 'contain',
+  },
+});
 
 export const BlogPost = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   marginTop: 100,
-})
+});
 
 export const BlogBox = styled('div', {
   display: 'flex',
@@ -51,7 +53,7 @@ export const BlogBox = styled('div', {
   '@iPad': {
     width: '90%',
   },
-})
+});
 
 export const BlogTitle = styled('h1', {
   display: 'inline-block',
@@ -61,19 +63,19 @@ export const BlogTitle = styled('h1', {
   backgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   fontSize: '$6',
-})
+});
 
 export const BlogInfo = styled('div', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
   marginTop: 20,
-})
+});
 
 export const BlogLeftContainer = styled('div', {
   display: 'flex',
   alignItems: 'center',
-})
+});
 
 export const BlogInfoContainer = styled('a', {
   display: 'flex',
@@ -94,7 +96,7 @@ export const BlogInfoContainer = styled('a', {
       width: 20,
     },
   },
-})
+});
 
 export const BlogHTML = styled('div', {
   color: '$white',
@@ -144,17 +146,17 @@ export const BlogHTML = styled('div', {
       background: '#5CC2E5',
     },
   },
-})
+});
 
 export const ShareButtonsDiv = styled('div', {
   margin: '30px 0',
   display: 'flex',
-})
+});
 
 export const ShareHeader = styled('h1', {
   fontFamily: '$primary',
   color: '$white',
-})
+});
 
 export const ShareButton = styled('a', {
   color: '$main',
@@ -170,23 +172,23 @@ export const ShareButton = styled('a', {
   '.animate': {
     animation: `${TooltipAnimation} 0.5s linear`,
   },
-})
+});
 
 export const Tooltip = styled('p', {
   color: '$white',
   fontFamily: '$primary',
   position: 'absolute',
   opacity: 0,
-})
+});
 
 export const preStyle = {
   borderRadius: 6,
   padding: 20,
   fontFamily: `JetBrain Mono, monospace`,
-}
+};
 
 export const codeProps = {
   style: {
     fontFamily: `"JetBrain Mono", monospace`,
   },
-}
+};

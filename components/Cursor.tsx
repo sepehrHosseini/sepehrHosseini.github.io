@@ -1,8 +1,8 @@
-import React from 'react'
-import useMousePosition from '@hooks/useMousePosition'
-import { MouseContext } from '@lib/Mouse/MouseContext'
+import React from 'react';
+import useMousePosition from '@hooks/useMousePosition';
+import { MouseContext } from '@lib/Mouse/MouseContext';
 
-import { styled } from '@css/theme.config'
+import { styled } from '@css/theme.config';
 
 const Ring = styled('div', {
   position: 'fixed',
@@ -10,7 +10,7 @@ const Ring = styled('div', {
   left: 0,
   width: 50,
   height: 50,
-  border: '2px solid white',
+  border: '2px solid var(--colors-main)',
   borderRadius: '100%',
   transform: 'translate(-50%, -50%)',
   transition: '0.2s ease-out',
@@ -19,7 +19,7 @@ const Ring = styled('div', {
   '@iPad': {
     display: 'none',
   },
-})
+});
 
 const Dot = styled('div', {
   position: 'fixed',
@@ -27,7 +27,7 @@ const Dot = styled('div', {
   left: '50%',
   width: 10,
   height: 10,
-  backgroundColor: 'white',
+  backgroundColor: 'var(--colors-main)',
   borderRadius: '100%',
   transform: 'translate(-50%, -50%)',
   zIndex: 999,
@@ -35,24 +35,26 @@ const Dot = styled('div', {
   '@iPad': {
     display: 'none',
   },
-})
+});
 
 const Cursor: React.FC = () => {
-  const { x, y } = useMousePosition()
-  const { cursorType, cursorChangeHandler } = React.useContext(MouseContext)
+  const { x, y } = useMousePosition();
+  const { cursorType, cursorChangeHandler } = React.useContext(MouseContext);
 
   React.useEffect(() => {
-    document.addEventListener('mousedown', () => cursorChangeHandler('hovered'))
-    document.addEventListener('mouseup', () => cursorChangeHandler(''))
+    document.addEventListener('mousedown', () =>
+      cursorChangeHandler('hovered')
+    );
+    document.addEventListener('mouseup', () => cursorChangeHandler(''));
 
-    const links = Array.from(document.getElementsByTagName('a'))
+    const links = Array.from(document.getElementsByTagName('a'));
     links.forEach((element) => {
       element.addEventListener('mouseover', () =>
         cursorChangeHandler('hovered')
-      )
-      element.addEventListener('mouseout', () => cursorChangeHandler(''))
-    })
-  })
+      );
+      element.addEventListener('mouseout', () => cursorChangeHandler(''));
+    });
+  });
 
   return (
     <>
@@ -65,7 +67,7 @@ const Cursor: React.FC = () => {
         style={{ left: `${x}px`, top: `${y}px` }}
       ></Dot>
     </>
-  )
-}
+  );
+};
 
-export default Cursor
+export default Cursor;
