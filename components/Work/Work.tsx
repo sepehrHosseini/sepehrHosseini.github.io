@@ -98,7 +98,7 @@ const AboutComponent: React.FC = () => {
               alt="Project Graphic"
               width={500}
               height={300}
-              style={{ 'object-fit': 'cover' }}
+              style={{ objectFit: 'cover' }}
             />
           </S.ProjectGraphic>
         </S.ProjectBox>

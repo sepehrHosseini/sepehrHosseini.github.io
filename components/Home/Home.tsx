@@ -19,7 +19,7 @@ const HomeComponent: React.FC = () => {
           animateOnce={true}
           delay={200}
         >
-          <S.ContainerText mono>Hi, I'm</S.ContainerText>
+          <S.ContainerText>Hi, I'm</S.ContainerText>
         </ScrollAnimation>
         <ScrollAnimation
           animateIn="animate__bounceInRight"
