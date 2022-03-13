@@ -26,7 +26,7 @@ const HomeComponent: React.FC = () => {
           delay={200}
           animateOnce={true}
         >
-          <S.Name>Omid Saraei</S.Name>
+          <S.Name>Omid Saraeii</S.Name>
         </ScrollAnimation>
         <ScrollAnimation
           animateIn="animate__flipInX"
